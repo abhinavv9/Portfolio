@@ -1,0 +1,172 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Career from "../components/Career.astro";
+import Projects from "../components/Projects.astro";
+import Foot from "../components/Foot.jsx";
+---
+
+<Layout title="Sudo">
+	<main
+		class="flex min-h-screen flex-col items-center py-2 mx-auto justify-start"
+	>
+		<h1 class="text-2xl font-bold">
+			<span class="text-gradient">SUDO</span>
+		</h1>
+		<p class="instructions">
+			Hii, i am <strong>Abhinav</strong> a.k.a <strong>sudoboink</strong>,
+			a 22 y/o versatile software developer bridging the realms of backend
+			and frontend, crafting seamless experiences through code wizardry
+			and meticulous craftsmanship.<br />
+			<br />As of now I am building an <strong
+				>online collaborative ide</strong
+			>, learning about <strong>backend and networking</strong> principle,
+			doing <strong>leetcode</strong> and having<strong>
+				4 meals a day</strong
+			>.<br />
+			<!-- Currently, I am working as a SDE Intern at{" "}<a href="https://agprop.in/" target="_blank"><strong>@agprop_</strong></a> -->
+		</p>
+		<!-- <ul role="list" class="link-card-grid"> -->
+		<Projects />
+		<Career />
+		<!-- </ul> -->
+		<div class="instructions w-[100%] py-2">
+			<h2 class="head">Get in touch</h2>
+			<p>
+				My inbox is always open. Whether yoou have a question or project
+				or just want to say hi. I'll try my best to get back to you!
+			</p>
+			<button class="px-8 py-2 border rounded my-4 btn">Say Hello</button>
+		</div>
+		<Foot />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 100ch;
+	}
+
+	.btn {
+		border: 1px solid rgb(var(--accent));
+		font-size: medium;
+		padding: 0.5rem 1rem;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		/* background-color: white; */
+		padding: 1rem;
+		border-radius: 0.4rem;
+		text-align: justify;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		font-weight: 600;
+		color: rgb(255, 255, 255);
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+
+	.heading {
+		font-weight: 700;
+		font-size: 28px;
+	}
+
+	.heading span {
+		color: rgb(110, 110, 248);
+	}
+
+	.btn {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #002bff, #7a00ff, #ff00c8, #da62c4, #002bff, #7a00ff, #6e6ef8);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn:active {
+    color: #000
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+.btn:hover:before {
+    opacity: 1;
+}
+
+.btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+</style>
+<script>
+	const btn = document.querySelector(".btn");
+
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		window.open("mailto:abhinavvrm14@gmail.com");
+	});
+</script>
