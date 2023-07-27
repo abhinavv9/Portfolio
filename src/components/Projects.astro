@@ -2,47 +2,48 @@
 import Card from "./Card.astro";
 ---
 
-<div class="flex flex-col items-start w-[100%] py-2 justify-start main">
-    <h2 class="head">Projects</h2>
-    <div class="link-card-grid mx-auto pb-4">
-        <Card
-            href="https://github.com/abhinavv9/url-shortner"
-            title="URL Shortner"
-            body="A tool to shorten long ugly URLs to short and sweet ones."
-        />
-        <Card
-            href="https://dscakgec.org/"
-            title="Community dev"
-            body="A website we built for the Google developer student club of my college."
-        />
-        <Card
-            href="https://github.com/abhinavv9/finTech-App-prod/tree/main"
-            title="PayBook"
-            body="An intelligent finance solution to provide innovation in area of managing personal finance"
-        />
-        <Card
-            href="https://www.igi-global.com/gateway/article/313420"
-            title="Research Paper"
-            body="Developed a hybrid credit card fraud detection model using ensemble learning techniques."
-        />
-    </div>
+<div class="flex flex-col items-start justify-start w-[100%] py-2 main">
+  <h2 class="head">Projects</h2>
+  <div class="link-card-grid mx-auto pb-4">
+    <Card
+      href="https://github.com/abhinavv9/url-shortner"
+      title="URL Shortner"
+      body="A tool to shorten long ugly URLs to short and sweet ones."
+    />
+    <Card
+      href="https://dscakgec.org/"
+      title="Community dev"
+      body="A website we built for the Google developer student club of my college."
+    />
+    <Card
+      href="https://github.com/abhinavv9/finTech-App-prod/tree/main"
+      title="PayBook"
+      body="An intelligent finance solution to provide innovation in area of managing personal finance"
+    />
+    <Card
+      href="https://www.igi-global.com/gateway/article/313420"
+      title="Research Paper"
+      body="Developed a hybrid credit card fraud detection model using ensemble learning techniques."
+    />
+  </div>
+  <p class="self-end tex text-gray-500 text-xs sm:text-base">All other projects are incomplete &#128517</p>
 </div>
 
 <style>
-    .main {
-        line-height: 1.6;
-        margin: 1rem 0;
-        border: 1px solid rgba(var(--accent), 25%);
-        /* background-color: white; */
-        padding: 1rem;
-        border-radius: 0.4rem;
-        text-align: justify;
-    }
+  .main {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    /* background-color: white; */
+    padding: 1rem;
+    border-radius: 0.4rem;
+    text-align: justify;
+  }
 
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 1rem;
-        padding: 0;
-    }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>
